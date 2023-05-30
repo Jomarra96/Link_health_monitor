@@ -1,6 +1,6 @@
-# Link health sniffer
+# Link health monitor
 
-Website auto health monitor will scan provided links in the csv file automatically and notify the user from any 404 error occuring in any of the websites.
+Link auto health monitor will scan provided links in the csv file automatically and notify the user from any 404 error occuring in any of the websites.
 
 ## Table of Contents
 
