@@ -22,16 +22,18 @@ def check_urls_from_csv(file_name, url_column):
     with open(file_name, 'r') as file:
         reader = csv.DictReader(file)
         row_number = 0
+        websites_down = 0
         for row in reader:
             row_number += 1
             url = row[url_column]
             status = check_url(url)
             if(status == 'Failure'):
+                websites_down += 1
                 print(f'Row: {row_number}, URL: {url}, Status: {status}')
             elif(row_number%10 == 0):
                 print(f'Current row: {row_number}')
     
-        print('Done!')
+        print(f'Done! Found {websites_down} website/s down\r\n')
 
 # Replace with the name of your CSV file (same directory than py file)
 # And the name of the column that contains the URLs
